@@ -1,0 +1,26 @@
+{
+  "name": "android-messages",
+  "version": "0.1.0",
+  "description": "An electron wrapper for https://messages.google.com",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && electron ./dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samperlmutter/android-messages.git"
+  },
+  "author": "Sam Perlmutter",
+  "bugs": {
+    "url": "https://github.com/samperlmutter/android-messages/issues"
+  },
+  "homepage": "https://github.com/samperlmutter/android-messages#readme",
+  "devDependencies": {
+    "electron": "^5.0.1",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {},
+  "keywords": [],
+  "license": "ISC"
+}

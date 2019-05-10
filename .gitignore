@@ -1,0 +1,5 @@
+node_modules/
+.idea/
+android-messages.iml
+package-lock.json
+dist/
