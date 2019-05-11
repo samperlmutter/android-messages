@@ -1,15 +1,30 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, shell } from 'electron';
+import * as Constants from "./constants";
 
 let win: any;
 
 app.on('ready', () => {
 	win = new BrowserWindow({
-		width: 800,
-		height: 600,
-		show: false
+		show: false,
+		title: Constants.title
 	});
-	win.webContents.loadURL("https://messages.google.com");
-	win.once("ready-to-show", () => {
+	win.webContents.loadURL(Constants.url);
+	win.once('ready-to-show', () => {
 		win.show();
 	});
+	win.on('page-title-updated', (e: Event) => {
+		e.preventDefault();
+	});
+	win.on('app-command', (e: Event, cmd: string) => {
+		if (cmd == 'browser-backward' || cmd == 'browser-forward') {
+			e.preventDefault();
+		}
+	});
+	win.webContents.on('will-navigate', handleNavigation);
+	win.webContents.on('new-window', handleNavigation);
 });
+
+function handleNavigation(e: Event, url: string) {
+	e.preventDefault();
+	shell.openExternal(url);
+}
