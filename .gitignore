@@ -3,3 +3,4 @@ node_modules/
 android-messages.iml
 package-lock.json
 dist/
+bin/
