@@ -1,6 +1,6 @@
 {
   "name": "android-messages",
-  "version": "0.1.0",
+  "version": "0.8.0",
   "description": "An electron wrapper for https://messages.google.com",
   "main": "src/main.ts",
   "scripts": {
