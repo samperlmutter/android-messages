@@ -1,3 +1,3 @@
 export const url = "https://messages.google.com/web";
 export const title = "Android Messages";
-export const authUrl = "https://messages.google.com/web/authentication";
+export const authUrl = "https://messages.google.com";

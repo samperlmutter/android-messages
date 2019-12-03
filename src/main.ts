@@ -25,7 +25,7 @@ app.on('ready', () => {
 });
 
 function handleNavigation(e: Event, url: string) {
-	if (url != Constants.authUrl) {
+	if (!url.includes(Constants.authUrl)) {
 		e.preventDefault();
 		shell.openExternal(url);
 	}

@@ -23,7 +23,7 @@
      },
      "mac": {
        "icon": "assets/android-messages.icns",
-       "darkModeSupport": false
+       "darkModeSupport": true
      },
      "files": [
        "!src",
@@ -42,7 +42,7 @@
   "homepage": "https://github.com/samperlmutter/android-messages#readme",
   "devDependencies": {
     "electron": "^5.0.1",
-    "electron-builder": "^20.40.2",
+    "electron-builder": "^21.2.0",
     "typescript": "^3.4.5"
   },
   "dependencies": {},
